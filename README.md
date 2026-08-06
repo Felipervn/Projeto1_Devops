@@ -26,3 +26,8 @@ Para verificar a instalação:
 docker --version
 ```
 <img width="1280" height="72" alt="image" src="https://github.com/user-attachments/assets/51891312-1a00-4125-902f-c7bc316542a6" />
+
+2. AWS CLI
+Instale seguindo a [documentação oficial](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+Para verificar:
