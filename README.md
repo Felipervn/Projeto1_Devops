@@ -31,3 +31,46 @@ docker --version
 Instale seguindo a [documentação oficial](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 Para verificar:
+```
+aws --version
+```
+<img width="367" height="62" alt="image" src="https://github.com/user-attachments/assets/bf08b943-6268-4aa3-b906-9526485252f5" />
+
+3. Conta AWS
+- Crie uma conta gratuita em aws.amazon.com
+- Importante: Alguns recursos podem gerar custos. Use o Free Tier quando possível
+
+4. Editor de Código
+- Utilizado: Nano/Linux
+
+## Estrutura do Projeto
+
+```
+meu-projeto/
+├── website/
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   └── assets/
+│       └── (imagens, fontes, etc.)
+└── Dockerfile (vamos criar)
+```
+
+## Arquitetura do Projeto
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  Código Local   │────▶│   Docker Image  │────▶│    Amazon ECR   │
+│  (HTML/CSS/JS)  │     │   (Container)   │     │   (Registry)    │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+                                                          │
+                                                          ▼
+                        ┌─────────────────┐     ┌─────────────────┐
+                        │    Browser      │◀────│    Amazon EC2   │
+                        │  (User Access)  │     │   (Container)   │
+                        └─────────────────┘     └─────────────────┘
+```
+
+## Fase 1: Preparação do Ambiente Local
+
+
